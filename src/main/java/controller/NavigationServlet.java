@@ -42,26 +42,26 @@ public class NavigationServlet extends HttpServlet {
 		ArcadeInventoryHelper aih = new ArcadeInventoryHelper();
 		String path = "/viewAllItemsServlet";
 		
-		if (act.equals("delete")) {
+		if (act.equals("Delete")) {
 			try {
 			Integer tempId = Integer.parseInt(request.getParameter("id"));
 			ArcadeInventory itemToDelete = aih.lookupArcadeById(tempId);
 			aih.deleteArcade(itemToDelete);
 			} catch (NumberFormatException e) {
-				System.out.println("Forgot to select an item.");
+				System.out.println("No option selected.");
 			}
 		}
-		else if (act.equals("edit")) {
+		else if (act.equals("Edit")) {
 			try {
 			Integer tempId = Integer.parseInt(request.getParameter("id"));
 			ArcadeInventory itemToEdit = aih.lookupArcadeById(tempId);
 			request.setAttribute("itemToEdit", itemToEdit);
 			path = "/edit-arcade.jsp";
 			} catch (NumberFormatException e) {
-				System.out.println("Forgot to select an item.");
+				System.out.println("No option selected.");
 			}
 		}
-		else if (act.equals("add")) {
+		else if (act.equals("Return")) {
 			path = "/index.html";
 		}
 		getServletContext().getRequestDispatcher(path).forward(request, response);

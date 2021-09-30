@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Pizza Planet Arcade Inventory</title>
-</head>
-<body>
-<img src="pizzaplanetlogo.jpg">
-<form action="addItemServlet" method="post">
-Title: <input type="text" name="title">
-Cost Per Play: <input type="text" name="costPerPlay">
-Purchase Price: <input type="text" name="purchasePrice">
-<input type="submit" value="Add Item">
-</form>
-<br />
-<a href="viewAllItemsServlet">View the complete list</a>
-</body>
+    <head>
+        <meta charset="ISO-8859-1">
+        <title>Pizza Planet Arcade Inventory</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <img src="pizzaplanetlogo.jpg" class="center">
+        </header>        
+        <div class="formcontainer">
+            <h1>Arcade Inventory</h1>
+            <form action="addItemServlet" method="post">
+                Title: <input type="text" name="title">
+                <br>
+                Cost Per Play: <input type="text" name="costPerPlay">
+                <br>
+                Purchase Price: <input type="text" name="purchasePrice">
+                <br>
+                <input type="submit" value="Add Item">
+            </form>
+        </div>
+        <a href="viewAllItemsServlet" class="center">View the complete list</a>
+    </body>
 </html>

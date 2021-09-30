@@ -1,0 +1,42 @@
+body {
+    background-color: black;
+    color: rgb(56, 143, 44);
+    font-size: x-large;
+}
+h1 {
+    margin:0;
+}
+form{
+    background-color: rgb(18, 18, 117);
+    display:inline-block;
+    margin: auto;
+    text-align: right;
+    padding: 0.5em;
+    border: 2px solid white;
+    
+}
+table{
+    width:100%;
+}
+td {
+    height:50px;
+    background-color: rgb(219, 218, 218);
+    font-size: medium;
+    text-align: left;
+
+}
+.center {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+.formcontainer {
+    display:block;
+    text-align:center;
+    margin: auto;    
+    width: 50%;
+}
+.tableheader {
+    background-color: rgb(56, 59, 55);
+    text-align: center;
+}
